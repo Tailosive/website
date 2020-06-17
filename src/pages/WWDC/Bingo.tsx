@@ -125,8 +125,7 @@ const Bingo = () => {
         <Section className='tailosive-section' style={{ paddingRight: 0 }}>
           <ol >
             {bingoCards.map((bingo) => (
-              // @ts-ignore
-              <li key={bingo.id}>{slots.includes(bingo.id) ? <strike>{bingo.title}</strike> : bingo.title}</li>
+              <li key={bingo.id}>{slots.includes(bingo.id) ? <del>{bingo.title}</del> : bingo.title}</li>
             ))}
           </ol>
           <Button style={{ fontWeight: '800' }} onClick={() => window.location.href = 'https://discord.gg/tailosive'}>SHARE WITH TAILOSIVE DISCORD <Icon style={{ marginLeft: '4px' }}><FontAwesomeIcon icon={faArrowAltCircleRight} /></Icon></Button>
