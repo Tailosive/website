@@ -238,7 +238,7 @@ const Home = () => {
           <Navbar />
         </Hero.Head>
         <Hero.Body style={{ padding: 0, paddingTop: '1rem', marginTop: '1.5rem' }}>
-          <div style={{ backgroundColor: 'rgb(52, 58, 64)', borderRadius: 15, padding: '2rem', marginBottom: '2%' }}>
+          <div className='banner-card'>
             <div style={{ paddingBottom: '15px' }}>
               <h1 style={{ width: 'auto' }}><strong>WWDC20</strong></h1>
               <small style={{ width: 'auto' }}>WWDC20 brings together millions of Apple developers around the world</small>
@@ -252,7 +252,7 @@ const Home = () => {
           <Title subtitle={true} className='tailosive-subtitle'>The Tailosive Network aims to create a multi-channel, family friendly network using multiple platforms across the internet.</Title>
         </Hero.Body>
       </Hero>
-      <Section className='tailosive-section' style={{ backgroundColor: '#343a40', marginTop: '30px' }}>
+      <Section className='tailosive-section colored-section'>
         <h4 style={{ fontSize: '25px' }}><strong>Our Channels</strong></h4>
         <ul className='tailosive-ul'>
           {channels.map(channel => (
@@ -275,7 +275,7 @@ const Home = () => {
         <p style={{ marginBottom: '15px' }}><small style={{ fontSize: '15px' }}>Join our growing community on discord!</small></p>
         <Button style={{ fontWeight: '800' }} rounded onClick={() => window.location.href = 'https://discord.gg/tailosive'}>JOIN US <Icon style={{ marginLeft: '4px' }}><FontAwesomeIcon icon={faArrowAltCircleRight} /></Icon></Button>
       </Section>
-      <Section className='tailosive-section' style={{ backgroundColor: '#343a40' }}>
+      <Section className='tailosive-section colored-section'>
         <h4 style={{ fontSize: '25px' }}><strong>Merchandise</strong></h4>
         <ul className='tailosive-ul tailosive-shirts'>
           {merchandise.map(merch => (

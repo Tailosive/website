@@ -27,6 +27,7 @@ body {
   width: 100%;
   text-align: center;
   background-color: #171717;
+  color: #ffffff !important;
 }
 
 .tailosive-ul li:first-child {
@@ -98,7 +99,12 @@ li {
     padding: 0.75rem 1.25rem;
     width: 100%;
     text-align: center;
-    background-color: #171717;
+    background-color: #ffffff;
+    color: #ffffff !important;
+  }
+
+  .tailosive-ui h4 {
+    color: #ffffff;
   }
 
   .tailosive-ul li:first-child {
@@ -113,7 +119,30 @@ li {
     border-top-left-radius: 0;
   }
 }
+
+.banner-card {
+  background-color: #eeeeee;
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 2%;
+}
+
+.colored-section {
+  background-color: #eeeeee;
+  margin-top: 30px;
+}
+
 @media (prefers-color-scheme: dark) {
+  .tailosive-ul li {
+    background-color: #171717;
+  }
+  .colored-section {
+    background-color: #343a40;
+    margin-top: 30px;
+  }
+  .banner-card {
+    background-color: #343a40;
+  }
   .title {
     color: #ffffff;
   }
@@ -137,9 +166,17 @@ li {
     color: #ffffff;
     font-weight: 900;
   }
+  .outer {
+    background-color: #343a40;
+  }
 }
 .outer {
   position: relative;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e6e6e6;
 }
 .outer:before {
   display: block;
@@ -156,7 +193,7 @@ li {
 }
 
 .activeBingo {
-  background-color: #5781f5 !important;
+  background-color: #789bfc !important;
 }
 
 .inner {

@@ -123,10 +123,10 @@ const Bingo = () => {
       </Hero>
       <div className='bingo-flex'>
         <Section className='tailosive-section' style={{ paddingRight: 0 }}>
-          <ol className='list'>
+          <ol >
             {bingoCards.map((bingo) => (
               // @ts-ignore
-              <li key={bingo.id} style={{ backgroundColor: '#171717' }}>{slots.includes(bingo.id) ? <strike>{bingo.title}</strike> : bingo.title}</li>
+              <li key={bingo.id}>{slots.includes(bingo.id) ? <strike>{bingo.title}</strike> : bingo.title}</li>
             ))}
           </ol>
           <Button style={{ fontWeight: '800' }} onClick={() => window.location.href = 'https://discord.gg/tailosive'}>SHARE WITH TAILOSIVE DISCORD <Icon style={{ marginLeft: '4px' }}><FontAwesomeIcon icon={faArrowAltCircleRight} /></Icon></Button>
@@ -135,7 +135,7 @@ const Bingo = () => {
           {/*  gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr', gridTemplateRows: '1fr 1fr 1fr 1fr 1fr', */}
           <div style={{ display: 'grid', height: '100%', gap: '10px', gridTemplateAreas: `"div div div div div" "div div div div div" "div div div div div" "div div div div div" "div div div div div"` }}>
             {bingoCards.map((bingo) => (
-              <div key={bingo.id} onClick={() => !slots.includes(bingo.id) ? setSlots([bingo.id, ...slots]) : setSlots(slots.filter((slot: number) => slot !== bingo.id))} className={`outer ${slots.includes(bingo.id) && 'activeBingo'}`} style={{ borderRadius: '8px', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgb(52, 58, 64)' }}> {/* gulp */}
+              <div key={bingo.id} onClick={() => !slots.includes(bingo.id) ? setSlots([bingo.id, ...slots]) : setSlots(slots.filter((slot: number) => slot !== bingo.id))} className={`outer ${slots.includes(bingo.id) && 'activeBingo'}`}> {/* gulp */}
                 <small className='inner'>{bingo.id}</small>
               </div>
             ))}
