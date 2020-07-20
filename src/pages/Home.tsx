@@ -5,14 +5,6 @@ import Navbar from '../components/Navbar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faYoutube, faTwitch, faTwitter, faDiscord } from '@fortawesome/free-brands-svg-icons'
 import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons'
-import { useHistory } from 'react-router-dom'
-import Countdown from 'react-countdown'
-import moment from 'moment'
-// wtf typescript, _ITS A PNG_
-// ah yes, statically typed images
-// 10/10 iq typescript
-
-// 10/10 iq typescript
 
 import gimmeabreaktee from '../images/shirts/gimmeabreaktee.png'
 import bubblyss from '../images/shirts/bubblyss.png'
@@ -219,18 +211,7 @@ const merchandise = [
   }
 ]
 
-const renderer = ({ days, hours, minutes, seconds, completed }: { days: number, hours: number, minutes: number, seconds: number, completed: boolean }) => {
-  if (completed) {
-    // Render a completed state
-    return <><small>WWDC HAS STARTED!</small><br />WATCH NOW AT <a href='https://apple.com/apple-events'>apple.com</a></>
-  } else {
-    // Render a countdown
-    return <span>{days > 0 && `${days}d`} {hours > 0 && `${hours}h`} {minutes > 0 && `${minutes}m`} {seconds > 0 && `${seconds}s`}</span>
-  }
-}
-
 const Home = () => {
-  const history = useHistory()
   return (
     <>
       <Hero className='tailosive-hero' size='medium'>
@@ -238,16 +219,6 @@ const Home = () => {
           <Navbar />
         </Hero.Head>
         <Hero.Body style={{ padding: 0, paddingTop: '1rem', marginTop: '1.5rem' }}>
-          <div className='banner-card'>
-            <div style={{ paddingBottom: '15px' }}>
-              <h1 style={{ width: 'auto' }}><strong>WWDC20</strong></h1>
-              <small style={{ width: 'auto' }}>WWDC20 brings together millions of Apple developers around the world</small>
-              <Title className='tailosive-title' style={{ width: 'auto', paddingTop: 0, marginBottom: 0 }}><Countdown renderer={renderer} date={new Date('2020-06-22T17:00:00Z')} /></Title>
-              <p>Starts at: {moment('2020-06-22T17:00:00Z').format('ddd DD, hA')}</p>
-            </div>
-            <Button style={{ fontWeight: '800' }} onClick={() => window.location.href = 'https://discord.gg/tailosive'}>JOIN THE DISCORD <Icon style={{ marginLeft: '4px' }}><FontAwesomeIcon icon={faArrowAltCircleRight} /></Icon></Button>
-            <Button style={{ fontWeight: '800', marginLeft: '10px' }} onClick={() => history.push('/bingo')}>BINGO <Icon style={{ marginLeft: '4px' }}><FontAwesomeIcon icon={faArrowAltCircleRight} /></Icon></Button>
-          </div>
           <Title className='tailosive-title' style={{ paddingTop: '20px' }}>Creating content for everyone.</Title>
           <Title subtitle={true} className='tailosive-subtitle'>The Tailosive Network aims to create a multi-channel, family friendly network using multiple platforms across the internet.</Title>
         </Hero.Body>
